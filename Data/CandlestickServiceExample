@@ -1,0 +1,47 @@
+namespace Stock.Data
+{
+    public class CandlestickServiceExample
+    {
+        public async Task<Candlestick[]> GetCandlesticksTask(string stock_id)
+        {
+            return GetCandleSticks(stock_id).ToArray();
+        }
+
+        public List<Candlestick> GetCandleSticks(string stock_id)
+        {
+            if (stock_id == "example")
+            {
+                return new List<Candlestick> {
+                    new Candlestick { OpenPrice = 83.5M, HighPrice = 89.3M, LowPrice = 83M, ClosePrice = 85.5M, Volume = 12127, DateTime = new DateTime(2023,3,1) },
+                    new Candlestick { OpenPrice = 86M, HighPrice = 93M, LowPrice = 86M, ClosePrice = 89.7M, Volume = 20407, DateTime = new DateTime(2023,3,2) },
+                    new Candlestick { OpenPrice = 90M, HighPrice = 98.6M, LowPrice = 90M, ClosePrice = 98.6M, Volume = 24180, DateTime = new DateTime(2023,3,3) },
+                    new Candlestick { OpenPrice = 102M, HighPrice = 108M, LowPrice = 100.5M, ClosePrice = 104.5M, Volume = 45395, DateTime = new DateTime(2023,3,6) },
+                    new Candlestick { OpenPrice = 108M, HighPrice = 114.5M, LowPrice = 107.5M, ClosePrice = 114.5M, Volume = 29909, DateTime = new DateTime(2023,3,7) },
+                    new Candlestick { OpenPrice = 116M, HighPrice = 116.5M, LowPrice = 110M, ClosePrice = 114M, Volume = 42137, DateTime = new DateTime(2023,3,8) },
+                    new Candlestick { OpenPrice = 115.5M, HighPrice = 121.5M, LowPrice = 112M, ClosePrice = 116M, Volume = 27402, DateTime = new DateTime(2023,3,9) },
+                    new Candlestick { OpenPrice = 113.5M, HighPrice = 113.5M, LowPrice = 108M, ClosePrice = 108.5M, Volume = 5853, DateTime = new DateTime(2023,3,10) },
+                    new Candlestick { OpenPrice = 107M, HighPrice = 111M, LowPrice = 104M, ClosePrice = 110.5M, Volume = 4922, DateTime = new DateTime(2023,3,13) },
+                    new Candlestick { OpenPrice = 108.5M, HighPrice = 111M, LowPrice = 108.5M, ClosePrice = 110M, Volume = 1883, DateTime = new DateTime(2023,3,14) },
+                    new Candlestick { OpenPrice = 112M, HighPrice = 113M, LowPrice = 107.5M, ClosePrice = 108M, Volume = 2705, DateTime = new DateTime(2023,3,15) },
+                    new Candlestick { OpenPrice = 108M, HighPrice = 110M, LowPrice = 106M, ClosePrice = 109M, Volume = 1772, DateTime = new DateTime(2023,3,16) },
+                    new Candlestick { OpenPrice = 111M, HighPrice = 115M, LowPrice = 110.50M, ClosePrice = 114.5M, Volume = 3306, DateTime = new DateTime(2023,3,17) },
+                    new Candlestick { OpenPrice = 115.5M, HighPrice = 116M, LowPrice = 114M, ClosePrice = 114M, Volume = 1788, DateTime = new DateTime(2023,3,20) },
+                    new Candlestick { OpenPrice = 115M, HighPrice = 116.5M, LowPrice = 114M, ClosePrice = 115M, Volume = 2111, DateTime = new DateTime(2023,3,21) },
+                    new Candlestick { OpenPrice = 116.5M, HighPrice = 119.5M, LowPrice = 116.5M, ClosePrice = 117M, Volume = 3154, DateTime = new DateTime(2023,3,22) },
+                    new Candlestick { OpenPrice = 117M, HighPrice = 125.5M, LowPrice = 117M, ClosePrice = 124.50M, Volume = 5095, DateTime = new DateTime(2023,3,23) },
+                    new Candlestick { OpenPrice = 125M, HighPrice = 125.5M, LowPrice = 117M, ClosePrice = 118.50M, Volume = 4100, DateTime = new DateTime(2023,3,24) },
+                    new Candlestick { OpenPrice = 118.5M, HighPrice = 118.5M, LowPrice = 115.5M, ClosePrice = 116M, Volume = 2330, DateTime = new DateTime(2023,3,27) },
+                    new Candlestick { OpenPrice = 116M, HighPrice = 116M, LowPrice = 104.5M, ClosePrice = 104.5M, Volume = 13967, DateTime = new DateTime(2023,3,28) },
+                    new Candlestick { OpenPrice = 104M, HighPrice = 105.5M, LowPrice = 100.5M, ClosePrice = 103.5M, Volume = 7599, DateTime = new DateTime(2023,3,29) },
+                    new Candlestick { OpenPrice = 105.5M, HighPrice = 106.5M, LowPrice = 102M, ClosePrice = 106M, Volume = 5028, DateTime = new DateTime(2023,3,30) },
+                    new Candlestick { OpenPrice = 105.5M, HighPrice = 105.5M, LowPrice = 102M, ClosePrice = 103.5M, Volume = 3459, DateTime = new DateTime(2023,3,31) },
+                    new Candlestick { OpenPrice = 102M, HighPrice = 107M, LowPrice = 102M, ClosePrice = 106.5M, Volume = 3364, DateTime = new DateTime(2023,4,6) },
+                    new Candlestick { OpenPrice = 106M, HighPrice = 107M, LowPrice = 103.50M, ClosePrice = 103.5M, Volume = 2311, DateTime = new DateTime(2023,4,7) },
+                    new Candlestick { OpenPrice = 104.50M, HighPrice = 111.50M, LowPrice = 104.50M, ClosePrice = 108M, Volume = 5395, DateTime = new DateTime(2023,4,10) },
+
+                };
+            }
+            return null;
+        }
+    }
+}
