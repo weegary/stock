@@ -65,5 +65,39 @@ namespace Stock.Data.Indicator
             }
             return (RSV, K, D);
         }
+        
+        public enum Signal { GoldenCross, DeathCross};
+
+        public bool IsGoldenCross(decimal pre_K, decimal K, decimal pre_D, decimal D)
+        {
+            if (K < pre_K)
+                return false;
+            if (pre_K < pre_D && K > D)
+                return true;
+            return false;
+        }
+
+        public bool IsDeathCross(decimal pre_K, decimal K, decimal pre_D, decimal D)
+        {
+            if (K > pre_K)
+                return false;
+            if (pre_K > pre_D && K < D)
+                return true;
+            return false;
+        }
+
+        public bool IsOverBuy(decimal K, decimal threshold = 80)
+        {
+            if (K >= threshold)
+                return true;
+            return false;
+        }
+
+        public bool IsOverSell(decimal K, decimal threshold = 20)
+        {
+            if (K <= threshold)
+                return true;
+            return false;
+        }
     }
 }
