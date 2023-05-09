@@ -49,5 +49,20 @@ namespace Stock.Data.Indicator
 
             return (macdValues, oscValues, difValues);
         }
+        
+        public enum Signal { GoldenCross, DeathCross };
+        public bool IsGoldenCross(decimal pre_osc, decimal osc)
+        {
+            if (pre_osc <= 0 && osc > 0)
+                return true;
+            return false;
+        }
+
+        public bool IsDeathCross(decimal pre_osc, decimal osc)
+        {
+            if (pre_osc >= 0 && osc < 0)
+                return true;
+            return false;
+        }
     }
 }
